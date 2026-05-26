@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>Фото-дневник</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>📔 Фото-дневник настроения</h1>
+        <div class="nav">
+            <a href="index.html">Главная</a> |
+            <a href="add.html">Новая запись</a> |
+            <a href="calendar.html">Календарь</a>
+        </div>
+
+        <!-- Группа абзацев с разными классами (для CSS) -->
+        <div class="info-group">
+            <h2>Как это работает?</h2>
+            <p class="good-mood">Выбери своё настроение – 😊 радость, 😐 нейтрально или 😢 грусть.</p>
+            <p>Сделай фото (или выбери из галереи) – запись сохранится.</p>
+            <p class="neutral-mood">Все записи собираются в ленту, а в календаре каждый день будет отмечен смайликом.</p>
+            <h3>Почему это полезно?</h3>
+            <p>Отслеживание эмоций помогает лучше понимать себя и замечать, что на самом деле влияет на настроение.</p>
+            <p class="good-mood">В конце месяца ты увидишь статистику и сможешь вспомнить яркие моменты.</p>
+            <p>Это простой способ вести дневник без лишних слов.</p>
+        </div>
+
+        <!-- Блок с кнопками, полями ввода, картинками, трансформациями -->
+        <div class="demo">
+            <h3>Попробуй прямо сейчас (демо)</h3>
+            <!-- Кнопка обычная -->
+            <button id="helloBtn">Сказать привет</button>
+            <!-- Кнопка-радио -->
+            <label><input type="radio" name="mood" value="good"> 😊 Хорошо</label>
+            <label><input type="radio" name="mood" value="neutral"> 😐 Норм</label>
+            <label><input type="radio" name="mood" value="bad"> 😢 Плохо</label>
+            <!-- Кнопка с картинкой (стилизованная) -->
+            <button class="img-btn">📸 Добавить фото</button>
+
+            <!-- Три поля ввода -->
+            <input type="text" id="specialComment" placeholder="Короткий комментарий">
+            <input type="date" id="moodDate" value="2025-05-26">
+            <input type="color" id="moodColor" value="#ffcc00">
+
+            <!-- Обычная картинка -->
+            <img src="https://via.placeholder.com/200x100?text=Mood+Tracker" alt="пример дневника">
+
+            <!-- Картинки с трансформациями (задание 4) -->
+            <div class="transform-demo">
+                <img src="https://via.placeholder.com/80" style="transform: translate(10px, 20px); margin: 10px;" alt="смещение">
+                <img src="https://via.placeholder.com/80" style="transform: scale(1.2, 0.8); margin: 10px;" alt="растяжение">
+                <img src="https://via.placeholder.com/80" style="transform: rotate(15deg); margin: 10px;" alt="поворот">
+            </div>
+
+            <!-- Гиперссылка на источник -->
+            <p>Больше о психологии эмоций: <a href="https://ru.wikipedia.org/wiki/Эмоция" target="_blank">Википедия</a></p>
+        </div>
+
+        <!-- CSS-фигура с анимацией (задание 5) -->
+        <div class="magic-ball"></div>
+    </div>
+
+    <script>
+        // Простой обработчик для кнопки
+        document.getElementById('helloBtn').onclick = function() {
+            alert('Привет! Записывай свои эмоции каждый день :)');
+        };
+    </script>
+</body>
+</html>
